@@ -1,8 +1,5 @@
-canvas {
-  border: 1px solid #000;
-}
-
 html,
 body {
     overscroll-behavior-y: contain;
+	margin: 0; padding: 0;
 }
