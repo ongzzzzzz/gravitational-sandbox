@@ -13,8 +13,6 @@ class Particle {
 		// radius = scale * sqrt(mass / π) 
 		this.radius = Math.sqrt(this.mass / PI) * (0.001*0.001) / SCALE;
 
-
-
 		// set random color for particle
 		this.color = color(
 			`hsl(${Math.floor(random(0, 360))}, 100%, 50%)`

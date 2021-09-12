@@ -1,13 +1,8 @@
-display velocity (pull-line)
+slider for scale of stuff 
 
-then edit initial velocity
+display velocity for circular orbit
 
-scale of stuff (use orbit to show where they go)
-
-calculate and display velocity
-find required velocity for circular orbit
-
-"mass" strokeWeight, let user use slider choose mass
+"mass" strokeWeight; let user use slider choose mass
 
 add description of project below
 
@@ -22,7 +17,7 @@ gravitational sandbox
 - toggle orbital velocity trajectory display
 - scale slider
 
-- make it 3d??? three.js???
+- make it 3d? (three.js)
 
 - make a solar system model (to scale, with labels, solar system api)
 - (with moons?)
