@@ -116,15 +116,12 @@ function draw() {
 function drawPerpLine() {
 	dotProd = clickedX * (clickedX - releasedX) + clickedY * (clickedY - releasedY);
 
-
 	shootVelocity = Math.sqrt(
 		(clickedX - releasedX) ** 2 + (clickedY - releasedY) ** 2
 	) * SCALE
 
 	circularVelocity = Math.sqrt(G * M / Math.sqrt(clickedX ** 2 + clickedY ** 2));
 	escapeVelocity = Math.SQRT2 * circularVelocity;
-
-	// console.log(shootVelocity, circularVelocity, escapeVelocity)
 
 	stroke(
 		(-perpendicularError < dotProd && dotProd < perpendicularError

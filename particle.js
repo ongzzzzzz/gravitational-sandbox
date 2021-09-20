@@ -51,41 +51,32 @@ class Particle {
 	}
 
 	physics(particle) {
-		// Use Particle (Gravitational Interaction)
-
 		// Don't apply to self
 		if (this === particle) return
 		if (particle.wontMove === true) return
 
 		// Distance between particles
-		let distance = this.position.dist(particle.position) / (0.001 / SCALE)
+		let distance = this.position.dist(particle.position)
 		// radius1 + radius2
 		let radius = this.radius + particle.radius
-
 		// Don't apply if particles are touching
 		if (distance <= radius) return
 
 		// mass1 * mass2
 		let mass = this.mass * particle.mass
-
 		// force = G * mass1 * mass2 / distance ** 2
 		// Get the vector that is in between this particle's position and the other particle's position, and set it to Gravitational Force
 		let force = p5.Vector.sub(this.position, particle.position)
-			// .mult(0.001/SCALE)
 			.setMag(G * mass / (distance ** 2))
-		// https://mathinsight.org/image/vector_b_minus_a	
 
 		// Apply the force
 		particle.applyForce(force)
-
 	}
 
 	update() {
-		// Update Particle
-
 		// collision detection
-		// left wall
 		if (bounce) {
+			// left wall
 			if (this.position.x - this.radius < -width / 2) {
 				this.velocity.x = abs(this.velocity.x) * (1-BOUNCE_DAMPING);
 			} // right wall
@@ -101,7 +92,6 @@ class Particle {
 			}
 		}
 
-
 		let deltaVelocity = p5.Vector.mult(this.acceleration, deltaTime)
 
 		this.velocity.set(this.velocity.add(deltaVelocity))
@@ -109,7 +99,6 @@ class Particle {
 		this.position.set(this.position.add(p5.Vector.mult(this.velocity, deltaTime)))
 
 		this.acceleration.set(0, 0)
-
 	}
 
 }
