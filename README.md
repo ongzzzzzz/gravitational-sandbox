@@ -1,3 +1,7 @@
+# Project Video
+
+[![thumbnail](https://img.youtube.com/vi/WqXju0YyfEE/0.jpg)](https://youtu.be/WqXju0YyfEE)
+
 slider for scale of stuff 
 
 display velocity for circular orbit
